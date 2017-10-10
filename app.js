@@ -4,3 +4,11 @@ function getShortest(s) {
 }
 
 console.log(getShortest("One Two Three"));
+
+
+//Get average number from the array
+function find_average(array) {
+  return eval(array.join('+')) / array.length;
+}
+
+console.log(find_average([1,2,3,4,5]));
