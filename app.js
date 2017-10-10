@@ -1,6 +1,8 @@
 //Find the shortest element in the set of strings
 function getShortest(s) {
-	return Math.min.apply(null, s.split(" ").map(w => w.length));
+	Math.min.apply(null, s.split(" ").map(function(w) {
+        return w.length;
+    }));
 }
 
 console.log(getShortest("One Two Three"));
@@ -12,3 +14,11 @@ function find_average(array) {
 }
 
 console.log(find_average([1,2,3,4,5]));
+
+
+//Detect if a certain string and the certain number are in the given string
+function isLockNessMonster(s) {
+  return /tree fiddy|three fifty|3.50/.test(s);  
+} 
+
+console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy"));
