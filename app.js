@@ -22,3 +22,11 @@ function isLockNessMonster(s) {
 } 
 
 console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy"));
+
+
+//return only the odd numbers from the given array
+function odds(values) {
+    return values.filter(v => v % 2);
+}
+
+console.log(odds([1,2,3,4,5,6]));
