@@ -30,3 +30,27 @@ function odds(values) {
 }
 
 console.log(odds([1,2,3,4,5,6]));
+
+
+//Take the array and remove all the elements that match the geese array elements
+function gooseFilter(birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(item => !geese.includes(item));
+}
+
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+
+//Given conditions:
+//Number 1 and 2 cannot be selected at the same time
+//Number 3 and 4 cannot be selected at the same time
+//Number 5 and 6 must be selected at the same time or both cannot be selected
+//Number 7 and 8 => at least one of them has to be selected if any
+function isValid(formula){
+  return (!(formula.includes(1) && formula.includes(2)) &&
+          !(formula.includes(3) && formula.includes(4)) &&
+          formula.includes(5) === formula.includes(6) &&
+          (formula.includes(7) || formula.includes(8)));
+}
+
+console.log(isValid([7,1,2,3]);
