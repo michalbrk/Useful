@@ -54,3 +54,13 @@ function isValid(formula){
 }
 
 console.log(isValid([7,1,2,3]);
+
+            
+//Take the given object and check the value of the property
+//Return the one you are interested in
+const cannonsReady = (gunners) => {
+  return Object.values(gunners).some(m => m === 'nay') ? 'Shiver me timbers!' : 'Fire!';
+}        
+
+console.log(cannonsReady({Mike: 'aye', Dan: 'aye', Roger: 'nay', Bob: 'aye'}));           
+            
