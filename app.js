@@ -64,3 +64,23 @@ const cannonsReady = (gunners) => {
 
 console.log(cannonsReady({Mike: 'aye', Dan: 'aye', Roger: 'nay', Bob: 'aye'}));           
             
+
+//Remove all exclamation marks without tha last one
+function remove(s) {
+    return s.replace(/!+/gi, "") + "!";
+}
+
+console.log(remove("!!Hi!"));
+console.log(remove("!!Hi"));
+console.log(remove("Hi!"));
+
+//Different values for different conditions
+function saleHotdogs(n) {
+    return n * (n < 5 ? 100 : n < 10 ? 95 : 90);
+}
+
+console.log(saleHotdogs(2));
+console.log(saleHotdogs(7));
+console.log(saleHotdogs(12));
+console.log(saleHotdogs(-2));
+console.log(saleHotdogs(0.2));
