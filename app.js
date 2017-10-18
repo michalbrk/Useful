@@ -84,3 +84,41 @@ console.log(saleHotdogs(7));
 console.log(saleHotdogs(12));
 console.log(saleHotdogs(-2));
 console.log(saleHotdogs(0.2));
+
+
+//Compare two arrays while one is the sum of its squared elements
+//and the other is the sum of its cubed elements
+function arrayMadness(a, b) {
+    return a.reduce((x,y) => x + y ** 2, 0) > b.reduce((x,y) => x + y ** 3, 0);
+}
+
+console.log(arrayMadness([1,2,3], [3,4,5]));
+
+
+//Rearrange the integer to the largest possible value
+//that can be got from its numbers
+function superSize(n){
+  return parseInt(n.toString().split('').sort().reverse().join(''))
+}
+
+console.log(superSize(123456));
+
+
+//Get the initial big letters from the words of the string
+//separated with the coma
+
+
+function abbrevName(name) {
+  return name.match(/\b\w/g).join('.').toUpperCase();  
+}
+
+console.log(abbrevName("Michal Bronek"));
+
+
+//Return which cuboid is bigger
+//taking that array elements are dimensions of the cuboid
+function find_difference(a, b) {
+  return Math.abs((a.reduce((x,y) => x * y)) - (b.reduce((x,y) => x * y)));
+}
+
+console.log(find_difference([1,2,3], [4,5,6]));
